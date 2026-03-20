@@ -1,5 +1,3 @@
-# 1. Write a function `make_dictionary` that takes two lists and returns a
-# dictionary with the names as keys and the scores as values.
 def make_dictionary(keys_list, values_list):
     """
     turn 2 lists into a dictionary
@@ -23,25 +21,30 @@ print(make_dictionary(["a", "b", "c", "b"], ["apple", "banana", "clementine", "d
 print(make_dictionary(["key"], ["value"]))
 
 # You have been given the following list fo students and their test scores:
-names = ["Maria", "Nushi", "Mohammed", "Jose", "Wei"]
-scores = [10, 23, 13, 18, 12]
+names = ["Maria", "Nushi", "Mohammed", "Jose", "Wei", "John Doe"]
+scores = [6.7, 2, 0, 189, 122, 1482239]
 
 # Assign the result of make_dictionary to score_dict, which will be used in the
 # exercises that follow.
 score_dict = make_dictionary(names, scores)
-
-# 2. Using `score_dict`, find the score for "Nushi"
+score_dict = {"Maria":6.7, "Nushi":0, "Mohammed":189, "Jose":2, "Wei":122, "John Doe":1482239}
+#2. Using `score_dict`, find the score for "Nushi"
 #### YOUR CODE HERE
-
+a = score_dict["Nushi"]
+print(f"Nushi has a {a}")
 # 3. Add a score 19 for "John"
 #### YOUR CODE HERE
-
+score_dict["joe"] = 19
 # 4. Calculate the average of all the scores in `score_dict`
 #### YOUR CODE HERE
-
+b = (score_dict["Nushi"] + score_dict["joe"] + score_dict["Maria"] + score_dict["Jose"] + score_dict["Mohammed"] + score_dict["Wei"] - score_dict["John Doe"])/6
+print(f"{b} is the class average for these idiots")
 # 5. Update the score for "Wei" to be 13
 #### YOUR CODE HERE
-
+del score_dict["Wei"]
+score_dict["Wei"] = 666
 # 6. Nushi has just dropped this class. Delete "Nushi" and his score from
 # `score_dict`
+del score_dict["Nushi"]
+print("Nushi is a weakling")
 #### YOUR CODE HERE
